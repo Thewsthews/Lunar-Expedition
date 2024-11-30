@@ -39,7 +39,7 @@ lunar-expedition/
 - Lua 5.4
 - Cargo package manager
 
-### Installation
+### Installation 🔗
 
 1. Clone the repository
 ```bash
