@@ -113,4 +113,4 @@ Rust Programming Language
 Lua Scripting Language
 Open-source community
 
-Happy lunar exploring! 🌙🚀
+Happy lunar exploring! 🌙🚀🤓
