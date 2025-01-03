@@ -48,15 +48,7 @@ fn display_room_description(lua: &lua, game_state: &GameState) -> Result<(), mlu
     Ok(())
 }
 
-fn process_player_command(
-lua: &Lua,
-game_state: &mut GameState,
-command: &str) -> Result<String, mlua::Error>{
-    let globals = lua.globals();
-    let process_command: mlua::Function = globals.get("process_command")?;
-
-    //calls lua function to handle the command
-    let result: String = process_command.call((command, game_state))?;
-
-    Ok(Result)
+fn process_player_command(lua: &Lua, game_state: &mut GameState, command: &str) -> Result<String, mlua::Error> {
+    let result: String = lua.globals().get::<_, mlua::Function>("process_command")?.call((command, game_state))?;
+    Ok(result)
 }
